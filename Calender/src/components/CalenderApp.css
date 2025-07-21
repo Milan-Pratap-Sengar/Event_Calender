@@ -117,12 +117,18 @@
 .events{
     width: 60%;
     height: 100%;
-    padding: 3rem 0;
+    padding: 1rem 0;
+    overflow: scroll;
+    /* background-color: pink; */
+}
+
+.events::-webkit-scrollbar{
+    appearance: none;
 }
 
 .event-popup{
     position: absolute;
-    top: 38%;
+    top: 40%;
     left: 2rem;
     background-color: #161b22;
     width: 20rem;
@@ -134,6 +140,7 @@
     justify-content: center;
     align-items: center;
     row-gap: 2rem;
+    padding-top: 2%;
 }
 
 .time-input{
@@ -142,7 +149,7 @@
 }
 
 .event-popup-time{
-    width: clamp(4rem, 4cqi, 7rem);
+    width: 4.5rem;
     background-color: #00a3ff;
     color: #fff;
     font-family: 'Bebas Neue', sans-serif;
@@ -161,7 +168,7 @@
 }
 
 .event-popup textarea{
-    width: clamp(15rem, 15cqi, 25rem);
+    width: 80%;
     aspect-ratio: 5 / 2;
     resize: none;
     background-color: #0f1319;
@@ -171,13 +178,15 @@
     color: #78879e;
     transition: border 0.5s;
 }
-
+.event-popup textarea::-webkit-scrollbar{
+    appearance: none;
+}
 .event-popup textarea:focus{
     border: 0.1rem solid #00a3ff;
 }
 
 .event-popup textarea::placeholder{
-    font-size: clamp(1rem, 0.8cqi, 1.2rem);
+    font-size: 1rem;
     color: #78879e;
 }
 
@@ -187,15 +196,16 @@
 
 .event-popup-btn{
     width: clamp(15rem, 15cqi, 25rem);
-    height: 4rem;
+    height: 2.5rem;
     background-color: #ef9011;
     color: #fff;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(1.5rem, 1.5cqi, 2.2rem);
+    font-size: 1.5rem;
     letter-spacing: 0.1rem;
     border: none;
-    box-shadow: 0 0 1.5rem 1rem rgba(239, 144, 17, 0.2);
+    box-shadow: 0 0 1.5rem 1rem rgba(239, 144, 17, 0.1);
     cursor: pointer;
+    border-radius: 1rem;
 }
 
 .event-popup-btn:active{
@@ -204,15 +214,16 @@
 
 .close-event-popup{
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0.5rem;
+    right: 0.5rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
+
 }
 
 .close-event-popup i{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: #fff;
     background-color: transparent;
 }
@@ -224,59 +235,63 @@
     border-bottom: 0.2rem solid #00a3ff;
     color: #fff;
     width: clamp(4rem, 4cqi, 7rem);
-    height: 4rem;
+    height: 2.5rem;
     text-align: center;
     font-size: clamp(1.2rem, 1.2cqi, 1.6rem);
 }
 
 .event{
     width: 100%;
-    height: 7rem;
+    height: 4rem;
     background-color: #00a3ff;
-    padding:  1.5rem 0;
+    padding:  0.1rem 0;
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     position: relative;
+    border-radius: 0.5rem;
 }
 
 .event-date-wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25%;
+    width: 30%;
+    height: 100%;
     border-right: 0.1rem solid rgba(255, 255, 255, 0.5);
 }
 
 .event-date{
-    font-size: clamp(1.3rem, 1cqi, 1.6rem);
-    line-height: 4rem;
+    padding-top: 10%;
+    font-size: 0.8rem;
     font-weight: bold;
     color: #fff;
 }
 
 .event-text{
-    font-size: clamp(1.2rem, 1cqi, 1.4rem);
-    line-height: 2rem;
+    font-size: 0.9rem;
+    /* line-height: 2rem */
     color:#fff;
     width: 75%;
-    padding: 0 3rem 0 1rem;
+    height: auto;
+    padding: 4% 10% 4% 3%;
     overflow-wrap: break-word;
 }
 
 .event-buttons{
     position: absolute;
+    padding-top: 2%;
     top:50%;
     transform: translateY(-50%);
-    right: 1rem;
+    right: 0.5rem;
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 0.5rem;
+    height: 100%;
 }
 
 .event-buttons i{
-    font-size: 1.6rem;
-    color: #fff;
+    font-size: 1.2rem;
     cursor:pointer;
 
 }
